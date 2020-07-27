@@ -30,6 +30,27 @@ header{
     padding: 0vh 3vh;
 }
 
+.links-header-admin{
+    width: 99vw;
+    position: relative;
+    margin-top: 0;
+    left: 50.5%;
+    right: 49%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #111111;
+    height: 80px;
+    
+}
+
+.links-header-admin a{
+    color: white;
+    text-decoration: none;
+    font-size: 35.6px;
+    line-height: 45px;
+    padding: 0% 15%;
+}
+
 .wrapper{
     margin-top: 3vh;
 }
