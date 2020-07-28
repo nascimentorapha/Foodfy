@@ -3,6 +3,7 @@ const info = document.querySelectorAll('.recipe-info-text')
 const visibility = document.querySelectorAll('.visibility')
 
 const cards = document.querySelectorAll('.card')
+const cards_admin = document.querySelectorAll('.card_admin_inside')
 
 //******** Esconder/Mostrar info das receitas ********//
 
@@ -26,4 +27,10 @@ for (let [i, card] of cards.entries()){
     card.addEventListener("click", function(){
         window.location.href=`/recipe/${i}`
     })
+}
+
+for (let [i, card_admin] of cards_admin.entries()){
+  card.addEventListener("click", function(){
+      window.location.href=`/admin/recipe/${i}`
+  })
 }
