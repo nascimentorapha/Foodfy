@@ -12,7 +12,7 @@ exports.create = function (req, res) {
 }
 
 exports.show = function(req, res) {
-    return res.render('admin/details')
+    return res.render('admin/details', {content: data.recipes})
 }
 
 exports.edit = function(req, res) {
