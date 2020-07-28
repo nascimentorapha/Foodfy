@@ -3,22 +3,27 @@
 {% block content %}
 
     <div class="content">
-        <h2>Mais acessadas</h2>
+        <h2>Gerenciar Receitas</h2>
     </div>
-    <section class="cards">
+    <section class="card_admin">
         
         {% for contents in content %}
 
-        <div class="card" id="{{contents.title}}">
+        <div class="card_admin_inside" id="{{contents.title}}">
             <div class="card_image_container" >
                 <img src="{{contents.image}}" alt="Imagem de {{contents.title}}">
             </div>
-            <div class="card_content">
-                <h2>{{ contents.title }}</h2>
+            <div class="card_info_admin">
+                <div class="card_content">
+                    <h2>{{ contents.title }}</h2>
 
-            </div>
-            <div class="card_info">
-                <p>por {{contents.author}}</p> 
+                </div>
+                <div class="card_info">
+                    <p>por {{contents.author}}</p> 
+                </div>
+                <div class="visualize">
+                    <a href="/admin/recipes/{{contents.id}}">Visualizar</a>
+                </div>
             </div>
         </div>
 
