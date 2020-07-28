@@ -1,6 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Sen&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap";
-
+*{
+    box-sizing: border-box;   
+}
 body{
     padding: 0% 15%;
     position: relative;
@@ -104,15 +106,75 @@ header{
 }
 
 
-.cards h2{
+.cards h2 {
     font-size: 20px;
     line-height: 30px;
 }
 
-.cards p{
+.cards p {
     font-size: 16px;
     line-height: 10px;
     color: #777777;
+}
+
+.card_admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    gap: 3vh;
+    margin-bottom: 8vh;
+    
+}
+
+.card_admin h2 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.card_admin p{
+    font-size: 16px;
+    line-height: 10px;
+    color: #777777;
+}
+
+.card_admin_inside {
+    display: flex;
+    /* height: 80px; */
+    max-height: 80px;
+}
+
+.card_admin_inside .card_image_container img {
+    max-width: 172px;
+    height: 100%;
+}
+
+.card_info_admin {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    margin: auto 16px;
+    height: 100%;
+}
+
+.card_info_admin h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #111111;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.card_info_admin p {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+.card_info_admin a {
+    text-decoration: none;
+    color: #6558C3 ;
+    font-family: 'Roboto-Regular' 'sans serif' ;
+    font-weight: bold;
 }
 
 .card_image_container img{
@@ -127,6 +189,7 @@ footer{
     left: 0;
     background-color: #EEEEEE;
     height: 80px;
+    margin-top: 24px;
 }
 
 footer p{
