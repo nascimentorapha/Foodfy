@@ -1,24 +1,56 @@
-{% extends "layout.njk" %}
+{% extends "layout-admin.njk" %}
 
 {% block head %}
 
-    <title>Detalhes da Receita - Foodfy</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>{{recipe.title}}</title>
+    <link rel="stylesheet" href="/styles.css">
 
 {% endblock %}
 
 {% block content %}
 
+    <section class="recipes-card-complete">
+        <div class="header_recipe_admin">
+            <h3>Receita: {{recipe.title}}</h3>
+            <a href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
+        </div>
+        <div class="recipes-card-image">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+        </div>
+        <div class="recipes-card-title">
+            <h2>{{recipe.title}}</h2>
+        </div>
+        <div>
+            <p class="recipes-card-author">por {{recipe.author}}</p>
+        </div>
         
-        <img src="{{content.image}}" alt="Imagem de {{content.title}}">
+        <div class="recipe-info">
+        <h3>Ingredientes <button class="visibility">ESCONDER</button></h3>
 
-        <div class="card_content">
-            <h2>{{ content.title }}</h2>
-
+        <div class="recipe-info-text">
+            <ul>
+            {% for item in recipe.ingredients %}
+            
+                <li>{{item}}</li>
+            
+            {% endfor %}
+            </ul>
         </div>
-        <div class="card_info">
-            <p>por {{content.author}}</p> 
+
+        <h3>Modo de Preparo <button class="visibility">ESCONDER</button></h3>
+        <div class="recipe-info-text">
+            <p>{{recipe.preparation}}</p>
         </div>
 
+        <h3>Informações Adicionais <button class="visibility">ESCONDER</button></h3>
+        <div class="recipe-info-text">
+            <p>{{recipe.information}}</p>
+        </div>
+        </div>
+
+    </section>
+
+
+    <script src="/scripts.js"></script>
 
 {% endblock %}
