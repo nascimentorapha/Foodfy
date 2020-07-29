@@ -1,0 +1,63 @@
+<div class="item">
+    <div>
+        <h4>Imagem da receita</h4>
+    </div>
+    <div>
+        <input 
+        type="url"
+        name="recipe_image" 
+        placeholder="http://"
+        value="{{recipe.image}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        <h4>Ingredientes</h4>
+    </div>
+    <div>
+        {% for recipes in recipe.ingredients %}
+            <input 
+            type="text" 
+            name="ingredient"
+            placeholder="2 xícaras de leite"
+            value="{{recipes}}"
+            >
+        {% endfor %}
+        <input 
+            type="text" 
+            name="ingredient"
+            placeholder="2 xícaras de leite"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        <h4>Modo de preparo</h4>
+    </div>
+    <div>
+        {% for recipes in recipe.preparation %}
+            <input 
+            type="text" 
+            name="preparation"
+            placeholder="2 xícaras de leite"
+            value="{{recipes}}"
+            >
+        {% endfor %}
+        <input 
+            type="text" 
+            name="preparation"
+            placeholder="Bata tudo no liquidificador"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>
+        <h4>Informações adicionais</h4>
+    </div>
+    <div>
+        <input type="text" placeholder="abc">
+    </div>
+</div>
