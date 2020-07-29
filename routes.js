@@ -9,7 +9,7 @@ routes.get("/", function(req, res){
 })
 
 routes.get('/recipe', function(req, res){
-    return res.render("recipe", { content: dados.recipes })
+    return res.render("recipe", { recipe: dados.recipes })
 })
 
 routes.get("/recipe/:index", function (req, res) {
