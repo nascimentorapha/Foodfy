@@ -7,22 +7,21 @@
     </div>
     <section class="card_admin">
         
-        {% for contents in content %}
+        {% for recipes in recipe %}
 
-        <div class="card_admin_inside" id="{{contents.title}}">
+        <div class="card_admin_inside" id="{{recipes.title}}">
             <div class="card_image_container" >
-                <img src="{{contents.image}}" alt="Imagem de {{contents.title}}">
+                <img src="{{recipes.image}}" alt="Imagem de {{recipes.title}}">
             </div>
             <div class="card_info_admin">
                 <div class="card_content">
-                    <h2>{{ contents.title }}</h2>
-
+                    <h2>{{ recipes.title }}</h2>
                 </div>
                 <div class="card_info">
-                    <p>por {{contents.author}}</p> 
+                    <p>por {{recipes.author}}</p> 
                 </div>
                 <div class="visualize">
-                    <a href="/admin/recipes/{{contents.id}}">Visualizar</a>
+                    <a href="/admin/recipes/{{recipes.id}}">Visualizar</a>
                 </div>
             </div>
         </div>
