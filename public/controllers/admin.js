@@ -9,8 +9,8 @@ exports.index = function(req, res) {
 
 exports.create = function (req, res) {
 
-    
-    return res.render('admin/create')
+
+    return res.render('admin/create', {recipe: data})
 }
 
 exports.show = function(req, res) {
