@@ -1,32 +1,32 @@
-{% extends "layout.njk" %}
+{% extends "layout-admin.njk" %}
 
 {% block head %}
 
-    <title>Receitas - Foodfy</title>
+    <title>{{recipe.title}}</title>
     <link rel="stylesheet" href="styles.css">
 
 {% endblock %}
 
 {% block content %}
 
-    <section class="cards">
+   <div class="recipe-edit">
 
-        {% for contents in content %}
+        <form method="POST" action="/admin/recipes">
 
-        <div class="card" id="{{contents.title}}">
-            <div class="card_image_container" >
-                <img src="{{contents.image}}" alt="Imagem de {{contents.title}}">
-            </div>
-            <div class="card_content">
-                <h2>{{ contents.title }}</h2>
+        <div class="header_edit_admin">
+            
+            <h2>Criar receita</h2>
+
+            <div class="buttons_edit_admin">
+                <button type="submit" class="button_action button_save" >Salvar receita</button>
 
             </div>
-            <div class="card_info">
-                <p>por {{contents.author}}</p> 
-            </div>
+
         </div>
-        {% endfor %}
         
-    </section>
+        {% include 'admin/fields-recipes.njk' %}
+
+
+    </div>
 
 {% endblock %}
