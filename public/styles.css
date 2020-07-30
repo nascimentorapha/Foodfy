@@ -341,3 +341,54 @@ footer p{
     border-radius: 8px;
     background-color: #6558C3;
 }
+
+/***** Editar receitas página adm ****/
+
+.recipe-edit {
+    margin-top: 6vh;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+.recipe-edit .header_edit_admin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-edit .header_edit_admin .buttons_edit_admin {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+}
+
+.button_action {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+}
+
+.button_save{
+    background-color: #6558C3;
+}
+
+.button_delete{
+    background-color: #DC4747;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    margin-bottom: 8px;
+    height: 49px;
+    font-size: 16px;
+    border: 1px solid #DDDDDD;
+    padding: 4px 0 4px 8px;
+}
+
+.lastitem input{
+    height: 260px;
+}
