@@ -18,16 +18,17 @@
             <h2>Editando receita</h2>
 
             <div class="buttons_edit_admin">
-                <button type="submit">Salvar</button>
+                <button type="submit" class="button_action button_save" >Salvar receita</button>
 
                 <form class="button-delete" action="/admin/recipes?_method=DELETE" method="post">
                     <input type="hidden" name="id" value={{recipe.id}}>
-                    <button type="submit">Deletar</button>
+                    <button type="submit" class="button_action button_delete" >Deletar</button>
                 </form>
 
             </div>
 
         </div>
+        
         {% include 'admin/fields-recipes.njk' %}
 
 
